@@ -1,0 +1,11 @@
+.form-github{
+    height: 85vh;
+}
+
+nav{
+    background-color: #222222 !important;
+}
+
+.logo-github svg{
+    width: 45px;
+}
