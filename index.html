@@ -6,11 +6,9 @@
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./node_modules/uikit/dist/css/uikit.min.css">
     <link rel="stylesheet" href="./styles/master.css">
-    <title>Document</title>
+    <title>Github API basic</title>
 </head>
 <body class="uk-background-secondary">
-    <!-- uk-background-secondary    uk-light 
-    uk-padding uk-panel -->
     <nav class="uk-navbar-container uk-margin uk-light" uk-navbar>
         <div class="uk-navbar-left">
             <a class="uk-navbar-item uk-logo logo-github" href="#"><span uk-icon="icon: github"></span></a>
@@ -37,27 +35,52 @@
     </nav>
     
     <section class="form-github uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-light uk-padding uk-panel">
-        <h3>Introduce tu username de github que deseas buscar</h3>
-        <form>
+        <h3>Introduce el username de github que deseas buscar</h3>
+        <div class="uk-margin-bottom">
             <div class="uk-margin">
                 <div class="uk-inline">
                     <span class="uk-form-icon" uk-icon="icon: user"></span>
-                    <input class="uk-input" type="text">
+                    <input id="usernameID"class="uk-input" type="text">
                 </div>
             </div>
-            <!-- <div class="uk-margin">
-                <div class="uk-inline">
-                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                    <input class="uk-input" type="text">
-                </div>
-            </div> -->
             <div class="uk-text-center">
-                <button type="submit" class="uk-button uk-button-default">Enviar</button>
+                <button  onclick="searchProfile()" class="uk-button uk-button-default">Enviar</button>
             </div>
-        </form>
-    </section>
+        </div>
 
+        <table id="info-table" class="uk-table uk-table-hover uk-table-divider uk-text-center">
+            <thead>
+                <img class="circle-img" src="" alt="">
+                <p id="dato0"></p>
+            </thead>
+            <thead>
+                <tr>
+                    <td id="follower"></td>
+                    <td id="following" ></td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <th id="dato1"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Location</td>
+                    <td id="dato2"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td id="dato3">No info</td>
+                </tr>
+                <tr>
+                    <td>Twitter profile</td>
+                    <td id="dato4">No info</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
     <script src="./node_modules/uikit/dist/js/uikit.min.js"></script>
     <script src="./node_modules/uikit/dist/js/uikit-icons.min.js"></script>
+    <script src="./scripts/master.js"></script>
 </body>
 </html>

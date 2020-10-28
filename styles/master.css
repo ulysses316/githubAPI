@@ -1,11 +1,33 @@
 .form-github{
-    height: 85vh;
+    min-height: 88vh;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .form-github{
+        min-height: 58vh;
+        height: 100vh;
+    }
 }
 
 nav{
     background-color: #222222 !important;
+    margin-bottom: 0 !important;
 }
 
 .logo-github svg{
     width: 45px;
+}
+
+th{
+    text-align: center !important;
+}
+
+#info-table{
+    display: none;
+}
+
+.circle-img{
+    width: 150px;
+    border-radius: 100%;
 }
